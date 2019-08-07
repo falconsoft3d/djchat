@@ -3,5 +3,5 @@ from ..dashboard.views import index_dashboard
 
 
 urlpatterns = [
-     url(r'dashboard', index_dashboard),
+    url(r'^index$', index_dashboard),
 ]
