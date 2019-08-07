@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'apps.shortcut',
     'apps.trigger',
     'apps.visitor',
+    'apps.dashboard',
+    'apps.home',
 ]
 
 MIDDLEWARE = [
