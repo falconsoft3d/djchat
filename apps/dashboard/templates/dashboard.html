@@ -106,7 +106,7 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
       </li>
-      <!-- Notifications Dropdown Menu -->
+      <!-- Notifications Dropdown Menu 
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
@@ -133,11 +133,15 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
+     -->
+
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+
+      
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -145,7 +149,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
+    <a href="/" class="brand-link">
       <img src="{% static '/dist/img/AdminLTELogo.png' %}"
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"
@@ -171,7 +175,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="home" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>Inicio</p>
             </a>
@@ -271,7 +275,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+    <!-- Content Header (Page header) 
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -284,14 +288,14 @@
             </ol>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>  /.container-fluid -->
     </section>
 
     <!-- Main content -->
     <section class="content">
-
+        {% block content %}
       <!-- Default box -->
-      <div class="card">
+      <div style="margin-top: 20px;"  class="card">
         <div class="card-header">
           <h3 class="card-title">Title</h3>
 
@@ -312,9 +316,8 @@
         <!-- /.card-footer-->
       </div>
       <!-- /.card -->
-
-    </section>
-    <!-- /.content -->
+      {% endblock %}
+  </section>
   </div>
   <!-- /.content-wrapper -->
 

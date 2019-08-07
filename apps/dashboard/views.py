@@ -16,6 +16,10 @@ def index_dashboard(request):
 def login_user(request):
     return render(request, "login.html")
 
+@login_required(login_url="/dashboard/home")
+def dashboard_home(request):
+    return render(request, "home.html")
+
 
 def auth(request):
     username = request.POST['email']
