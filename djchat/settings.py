@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'apps.role',
     'apps.shortcut',
     'apps.trigger',
-    'apps.user',
     'apps.visitor',
 ]
 
