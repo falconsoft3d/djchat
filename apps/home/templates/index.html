@@ -1,8 +1,815 @@
-{% extends 'base/base.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>DJChat</title>
+    <!-- Bootstrap CSS -->
+    
+	{% load static %}
 
-{% block title %} Home {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/et-line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/iconmonstr-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static '/css/main.css' %}">
+	<link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800%7cPoppins:100,200,300,400,500,600,700,800" rel="stylesheet">
+  </head>
+  <body>
+	  <!-- ==================================================
+							load-wrapp
+      ================================================== -->
+	  <div class="load-wrapp">
+		  <div class="wrap">
+			  <ul class="dots-box">
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			    <li class="dot"><span></span></li>
+			  </ul>
+		  </div>
+      </div> 
+	  <!-- ==================================================
+							End load-wrapp
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							navbar
+      ================================================== -->
+	  <nav class="navbar navbar-transparent navbar-black-links navbar-expand-lg">
+		  <div class="container">
+			  <a class="navbar-brand" href="#"> 
+				  <img src="{% static 'images/logo.png' %}" alt="logo">
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="fa fa-bars"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="main-navbar">
+				  <ul class="navbar-nav ml-auto">  
+				      <li class="nav-item">
+					  	<a class="nav-link" href="" data-scroll-nav="1">Inicio</a>
+				  	  </li>
 
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="3">Servicios</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="4">Faqs</a>
+					  </li>
+					  <li class="nav-item">
+					  	<a class="nav-link" href="#" data-scroll-nav="5">Planes</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Blog
+						  </a>
+						  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						      <a class="dropdown-item fs-14" href="blog-list.html"><span class="color-blue">-</span> Blog List</a>
+						      <a class="dropdown-item fs-14" href="blog-grid.html"><span class="color-blue">-</span> Blog Grid</a>
+							  <a class="dropdown-item fs-14" href="single-blog-page.html"><span class="color-blue">-</span> Single Blog </a>
+						  </div>
+					  </li>
+					  
+					  <li class="nav-item dropdown">
+						  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Pages
+						  </a>
+						  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						      <a class="dropdown-item fs-14" href="features-page.html"><span class="color-blue">-</span> Features</a>
+						      <a class="dropdown-item fs-14" href="about-page.html"><span class="color-blue">-</span> About</a>
+							  <a class="dropdown-item fs-14" href="services-page.html"><span class="color-blue">-</span> Services</a>
+							  <a class="dropdown-item fs-14" href="leadership-page.html"><span class="color-blue">-</span> Leadership</a>
+							  <a class="dropdown-item fs-14" href="contact-page.html"><span class="color-blue">-</span> Contact</a>
+							  <a class="dropdown-item fs-14" href="login-page.html"><span class="color-blue">-</span> Log In</a>
+							  <a class="dropdown-item fs-14" href="register-page.html"><span class="color-blue">-</span> Register</a>
+							  <a class="dropdown-item fs-14" href="lost-password-page.html"><span class="color-blue">-</span> Lost Password</a>
+							  <a class="dropdown-item fs-14" href="404-page.html"><span class="color-blue">-</span> 404 Erro</a>
+						  </div>
+					  </li>
+					  <li class="nav-item log-in">
+					  	<a class="nav-link flex-center bg-blue radius-5px transition-3" href="login-page.html">Log In</a>
+					  </li>
+				  </ul>
+			  </div>
+		  </div>
+	  </nav>
+	  <!-- ==================================================
+							End navbar
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							welcome-area
+      ================================================== -->
+	  <section class="welcome-area sec-padding p-relative o-hidden" data-scroll-index="1">
+		  <div class="container">
+			  <div class="row welcome-text sec-padding flex-center">
+				  <div class="col-md-6 mb-50px z-index-1">
+					  <h1 class="mb-20px">Chatea en Tiempo Real</h1>
+					  <p>DJChat es una aplicación en Django para hacer chat Online</p>
+					  <a class="main-btn btn-3 mt-30px" href="https://www.youtube.com/watch?v=PkkV1vLHUvQ" data-lity><i class="fa fa-play"></i> Watch Our Video</a>
+				  </div>
+				  <div class="col-md-6 text-center">
+					  <img alt="img" src="https://via.placeholder.com/700x678">
+				  </div>
+			  </div>
+		  </div>
+		  <div class="shape-1 bg-gray p-absolute">
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End welcome-area
+      ================================================== -->
+	  
+	  
+	  
+	  <!-- ==================================================
+      ================================================== -->
+	  <section class="text-center bg-gray triangle-top triangle-bottom">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-md-8 offset-md-2">
+					  <div class="mt-25px ">
+						  <h3 class="mb-15px wow fadeInUp" data-wow-delay="0.45s">We provide <span class="color-blue">proffesional </span> staff to help you</h3>
+						  <p class="mb-20px wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+						  <a class="main-btn btn-3 before-gray mb-30px wow fadeInUp" data-wow-delay="0.55s" href="#">Read More</a>
+						  <img alt="img" src="https://via.placeholder.com/952x500" class="d-block m-auto wow fadeInUp" data-wow-delay="0.55s">
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							services-area-5
+      ================================================== -->
+	  <section class="services-area-5 sec-padding text-center p-relative" data-scroll-index="3">
+		  <div class="container">
+			  <h1 class="title-h">Our Services</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <div class="row">
+				  <div class="col-md-4">
+					  <div class="services-text pl-30px pr-30px mt-25px mb-25px wow fadeInUp" data-wow-delay="0.3s">
+						  <i class="im im-umbrella p-absolute color-blue fs-35 bg-gray text-center radius-50 mb-25px transition-2"></i>
+						  <div class="pl-">
+							  <h4 class="mb-5px">Marketing</h4>
+							  <span class="color-blue bg-gray pl-15px pr-15px pt-5px pb-5px radius-50px fw-400 fs-14">Provide High Quality</span>
+						  	  <p class="mt-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet.</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-md-4">
+					  <div class="services-text pl-30px pr-30px mt-25px mb-25px wow fadeInUp" data-wow-delay="0.5s">
+						  <i class="im im-sun p-absolute color-blue fs-35 bg-gray text-center radius-50 mb-25px transition-2"></i>
+						  <div class="pl-">
+							  <h4 class="mb-5px">Design</h4>
+							  <span class="color-blue bg-gray pl-15px pr-15px pt-5px pb-5px radius-50px fw-400 fs-14">Provide High Quality</span>
+							  <p class="mt-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet.</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-md-4">
+					  <div class="services-text pl-30px pr-30px mt-25px mb-25px wow fadeInUp" data-wow-delay="0.7s">
+						  <i class="im im-wrench p-absolute color-blue fs-35 bg-gray text-center radius-50 mb-25px transition-2"></i>
+						  <div class="pl-">
+							  <h4 class="mb-5px">Helping Support</h4>
+							  <span class="color-blue bg-gray pl-15px pr-15px pt-5px pb-5px radius-50px fw-400 fs-14">Provide High Quality</span>
+							  <p class="mt-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolor sit amet.</p>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End services-area-5
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							team-area-2
 
-{% block content %}
-	<h5>Soy Pagina Inicial</h5>
-{% endblock %}
+	  <section class="team-area-2 bg-gray text-center triangle-top triangle-bottom">
+		  <div class="container">
+			  <h1 class="title-h">Our Team Members</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <div class="row">
+				  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+					  <div class="mt-25px mb-25px">
+						  <div class="p-relative o-hidden d-inline-block radius-10px mb-20px ml-auto mr-auto">
+						  	  <img src="https://via.placeholder.com/300x300" alt="img" class="radius-10px transition-3">
+							  <div class="social p-absolute flex-center transition-4">
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-facebook"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-twitter"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-behance"></i></a>
+							  </div>
+						  </div>
+						  <h5 class="mb-0px">Daniel Edward</h5>
+						  <span class="color-blue fs-15 d-block mb-15px">Web Designer</span>
+					  </div>
+				  </div>
+				  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+					  <div class="mt-25px mb-25px">
+						  <div class="p-relative o-hidden d-inline-block radius-10px mb-20px ml-auto mr-auto">
+						  	  <img src="https://via.placeholder.com/300x300" alt="img" class="radius-10px transition-3">
+							  <div class="social p-absolute flex-center transition-4">
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-facebook"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-twitter"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-google-plus"></i></a>
+							  </div>
+						  </div>
+						  <h5 class="mb-0px">Robert Richard</h5>
+						  <span class="color-blue fs-15 d-block mb-15px">App Developer</span>
+					  </div>
+				  </div>
+				  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+					  <div class="mt-25px mb-25px">
+						  <div class="p-relative o-hidden d-inline-block radius-10px mb-20px ml-auto mr-auto">
+						  	  <img src="https://via.placeholder.com/300x300" alt="img" class="radius-10px transition-3">
+							  <div class="social p-absolute flex-center transition-4">
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-facebook"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-instagram"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-behance"></i></a>
+							  </div>
+						  </div>
+						  <h5 class="mb-0px">James Charles</h5>
+						  <span class="color-blue fs-15 d-block mb-15px">Sales Designer</span>
+					  </div>
+				  </div>
+				  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					  <div class="mt-25px mb-25px">
+						  <div class="p-relative o-hidden d-inline-block radius-10px mb-20px ml-auto mr-auto">
+						  	  <img src="https://via.placeholder.com/300x300" alt="img" class="radius-10px transition-3">
+							  <div class="social p-absolute flex-center transition-4">
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-facebook"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-linkedin"></i></a>
+								  <a href="#0" class="color-fff fs-14 d-inline-block radius-50 bg-orange-hvr color-fff-hvr transition-2 mr-2px ml-2px"><i class="fa fa-behance"></i></a>
+							  </div>
+						  </div>
+						  <h5 class="mb-0px">Robert Richard</h5>
+						  <span class="color-blue fs-15 d-block mb-15px">App Developer</span>
+						  
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+
+							End team-area-2
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							vision-area
+
+	  <section class="vision-area sec-padding">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-md-4 mt-25px mb-25px">
+					  <div class="vision-dots">
+						  <div class="dot mb-40px">
+							  <i class="im im-color-fan fs-20 bg-gray radius-50 text-center mb-10px mr-5px"></i> 
+							  <h4 class="mb-5px">Marketing</h4>
+							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  eiusmod tempor .</p>
+						  </div>
+						  <div class="dot mb-40px">
+							  <i class="im im-idea fs-20 bg-gray radius-50 text-center mb-10px mr-5px"></i> 
+							  <h4 class="mb-5px">Branding</h4>
+							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  eiusmod tempor .</p>
+						  </div>
+						  <div class="dot">
+							  <i class="im im-laptop-o fs-20 bg-gray radius-50 text-center mb-10px mr-5px"></i> 
+							  <h4 class="mb-5px">Development</h4>
+							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  eiusmod tempor .</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-md-7 offset-md-1 mt-25px">
+					  <div class="owl-carousel">
+						  <div>
+							  <img alt="img" src="https://via.placeholder.com/800x694">
+						  </div>
+						  <div>
+							  <img alt="img" src="https://via.placeholder.com/800x610">
+						  </div>
+						  <div>
+							  <img alt="img" src="https://via.placeholder.com/805x550">
+						  </div>
+					  </div>
+				  </div>
+			  </div>  
+		  </div>
+	  </section>
+
+							End vision-area
+      ================================================== -->
+	  
+	  <!-- ==================================================
+      ================================================== -->
+	  <section class="bg-gray triangle-top triangle-bottom">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-md-6">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/646x600">
+					  </div>
+				  </div>
+				  <div class="col-md-6">
+					  <div class="mt-25px mb-25px">
+						  <span class="fs-20 fw-400 color-blue">Highly Creative Soultions</span>
+						  <h3 class="mb-15px mt-10px">Increase You Business With PXsaas</h3>
+						  <p class="mb-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+						  <div class="row">
+							  <div class="col-md-6">
+								  <div class="mt-10px mb-10px p-relative">
+									  <i class="icon-genius color-blue fs-35 p-absolute"></i>
+									  <div class="pl-60px">
+										  <h5>Creative Soultions</h5>
+										  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+									  </div>
+								  </div>
+							  </div>
+							  <div class="col-md-6">
+								  <div class="mt-10px mb-10px p-relative">
+									  <i class="icon-key color-blue fs-35 p-absolute"></i>
+									  <div class="pl-60px">
+										  <h5>Secure & private</h5>
+										  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+									  </div>
+								  </div>
+							  </div>
+							  <div class="col-md-6">
+								  <div class="mt-10px mb-10px p-relative">
+									  <i class="icon-global color-blue fs-35 p-absolute"></i>
+									  <div class="pl-60px">
+										  <h5>International</h5>
+										  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+									  </div>
+								  </div>
+							  </div>
+							  <div class="col-md-6">
+								  <div class="mt-10px mb-10px p-relative">
+									  <i class="icon-tools-2 color-blue fs-35 p-absolute"></i>
+									  <div class="pl-60px">
+										  <h5>Supporting</h5>
+										  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							how-work
+      
+	  <section class="how-work text-center sec-padding">
+		  <div class="container">
+			  <h1 class="title-h">How It Works</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <div class="row">
+				  <div class="col-md-4 p-relative">
+					  <div class="mt-25px mb-25px pr-30px pl-30px">
+						  <span class="p-relative d-inline-block bg-gray color-blue radius-50 text-center fs-30 fw-600 mb-15px transition-3">
+							  01
+						  </span>
+						  <h4>Design</h4>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					  </div>
+				  </div>
+				  <div class="col-md-4 p-relative">
+					  <div class="mt-25px mb-25px pr-30px pl-30px">
+						  <span class="p-relative d-inline-block bg-gray color-blue radius-50 text-center fs-30 fw-600 mb-15px transition-3">
+							  02
+						  </span>
+						  <h4>Develop</h4>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					  </div>
+				  </div>
+				  <div class="col-md-4 p-relative last-one">
+					  <div class="mt-25px mb-25px pr-30px pl-30px">
+						  <span class="p-relative d-inline-block bg-gray color-blue radius-50 text-center fs-30 fw-600 mb-15px transition-3">
+							  03
+						  </span>
+						  <h4>Product</h4>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+
+							End how-work
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							testimonials-2
+
+	  <section class="testimonials-2 bg-gray triangle-top triangle-bottom">
+		  <div class="container">
+			  <h1 class="title-h">Clients Review</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <div class="owl-carousel owl-theme pr-50px pl-50px">
+				  <div class="single-review">
+					  <div class="row justify-content-md-center bg-fff p-50px">
+						  <div class="col-md-3">
+							  <img alt="img" src="https://via.placeholder.com/150x150" class="radius-50 ml-auto mr-auto mb-20px">
+						  </div>
+						  <div class="col-md-8">
+							  <p class="fs-16 fw-300 color-555">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+							  <h5 class="mt-20px mb-0px">Daniel Robert </h5>
+							  <span class="color-blue fw-400 fs-15 d-block mb-10px">Web Designer</span>
+							  <p>
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+							  </p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="single-review">
+					  <div class="row justify-content-md-center bg-fff p-50px">
+						  <div class="col-md-3">
+							  <img alt="img" src="https://via.placeholder.com/150x150" class="radius-50 ml-auto mr-auto mb-20px">
+						  </div>
+						  <div class="col-md-8">
+							  <p class="fs-16 fw-300 color-555">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+							  <h5 class="mt-20px mb-0px">Robert Richard</h5>
+							  <span class="color-blue fw-400 fs-15 d-block mb-10px">App Developer</span>
+							  <p>
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star-half-o color-gold"></i> 
+							  </p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="single-review">
+					  <div class="row justify-content-md-center bg-fff p-50px">
+						  <div class="col-md-3">
+							  <img alt="img" src="https://via.placeholder.com/150x150" class="radius-50 ml-auto mr-auto mb-20px">
+						  </div>
+						  <div class="col-md-8">
+							  <p class="fs-16 fw-300 color-555">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+							  <h5 class="mt-20px mb-0px">Robert Edward</h5>
+							  <span class="color-blue fw-400 fs-15 d-block mb-10px">App Developer</span>
+							  <p>
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star color-gold"></i> 
+								  <i class="fa fa-star-o color-gold"></i> 
+							  </p>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+
+							End testimonials-2
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							faqs
+      ================================================== -->
+	  <section class="sec-padding faqs" data-scroll-index="4">
+		  <div class="container">
+			  <h1 class="title-h">Frequently Asked Question</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <div class="row">
+				  <div class="col-md-6">
+					  <div class="box mt-25px mb-25px wow fadeInLeft" data-wow-delay="0.7s"> 
+						  <h6 class="orange mb-15px radius-50px pl-20px pt-7px pb-7px"><span class="mr-5px fs-30">-</span> What you get after buying our product?</h6>
+                    	  <p class="pl-20px mb-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						  <h6 class="blue mb-15px radius-50px pl-20px pt-7px pb-7px"><span class="mr-5px fs-30">-</span> What are features inside the template?</h6>
+                    	  <p class="pl-20px mb-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						  <h6 class="blue mb-15px radius-50px pl-20px pt-7px pb-7px"><span class="mr-5px fs-30">-</span> What are the plugins  used?</h6>
+                    	  <p class="pl-20px mb-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						  <h6 class="blue mb-15px radius-50px pl-20px pt-7px pb-7px"><span class="mr-5px fs-30">-</span> What are features inside the template?</h6>
+                    	  <p class="pl-20px mb-15px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+				  </div>
+				  <div class="col-md-6">
+					  <div class="mt-25px mb-25px wow fadeInRight" data-wow-delay="0.45s"> 
+						  <img alt="img" src="https://via.placeholder.com/550x310">
+                      </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End faqs
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							price-area
+      ================================================== -->
+	  <section class="price-area bg-gray text-center triangle-top triangle-bottom" data-scroll-index="5">
+		  <div class="container">
+			  <h1 class="title-h">Our Packages</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <ul class="tabs list-unstyled  text-center">
+				  <li id="tab1" class="active pl-25px pr-25px pt-10px pb-10px bg-fff color-blue mb-10px d-inline-block">Monthly</li>
+				  <li id="tab2" class="pl-25px pr-25px pt-10px pb-10px bg-fff color-blue mb-10px d-inline-block">Yearly </li>
+			  </ul>
+			  <div class="tabs-content">
+				  <div id="tab1-content">
+					  <div class="row">
+						  <div class="col-md-4">
+							  <div class="price-table bg-fff mt-25px mb-25px">
+								  <h3 class="fw-500">Basic</h3>
+								  <h1 class="fw-500 mt-20px mb-20px"><span class="fw-200 bg-gray radius-50px pl-15px pr-15px">29 <span class="fs-25">$</span> </span>  <span class="fs-20"> / mo</span></h1>
+								  <p class="ml-10px mr-10x mb-20px">when an unknown printer took a galley of type and scrambled it</p>
+								  <p><i class="fa fa-check color-blue"></i> 3 Users</p>
+								  <p><i class="fa fa-check color-blue"></i>  2GB Space</p>
+								  <p><i class="fa fa-check color-blue"></i>  3 Account</p>
+								  <p><i class="fa fa-check color-blue"></i>  Supporting</p>
+								  <p><i class="fa fa-close color-orange"></i> Unlimated Download</p>
+								  <p><i class="fa fa-close color-orange"></i> Unlimated Updates</p>
+								  <a class="main-btn btn-3 mt-20px" href="#0">Order Now</a>
+							  </div>
+						  </div>
+						  <div class="col-md-4">
+							  <div class="price-table bg-fff mt-25px mb-25px">
+								  <h3 class="fw-500">Premium</h3>
+								  <h1 class="fw-500 mt-20px mb-20px"><span class="fw-200 bg-gray radius-50px pl-15px pr-15px">39 <span class="fs-25">$</span> </span>  <span class="fs-20"> / mo</span></h1>
+								  <p class="ml-10px mr-10x mb-20px">when an unknown printer took a galley of type and scrambled it</p>
+								  <p><i class="fa fa-check color-blue"></i> 3 Users</p>
+								  <p><i class="fa fa-check color-blue"></i>  2GB Space</p>
+								  <p><i class="fa fa-check color-blue"></i>  3 Account</p>
+								  <p><i class="fa fa-check color-blue"></i>  Supporting</p>
+								  <p><i class="fa fa-check color-blue"></i> Unlimated Download</p>
+								  <p><i class="fa fa-close color-orange"></i> Unlimated Updates</p>
+								  <a class="main-btn btn-3 mt-20px" href="#0">Order Now</a>
+							  </div>
+						  </div>
+						  <div class="col-md-4">
+							  <div class="price-table bg-fff mt-25px mb-25px">
+								  <h3 class="fw-500">Business</h3>
+								  <h1 class="fw-500 mt-20px mb-20px"><span class="fw-200 bg-gray radius-50px pl-15px pr-15px">59 <span class="fs-25">$</span> </span>  <span class="fs-20"> / mo</span></h1>
+								  <p class="ml-10px mr-10x mb-20px">when an unknown printer took a galley of type and scrambled it</p>
+								  <p><i class="fa fa-check color-blue"></i> 3 Users</p>
+								  <p><i class="fa fa-check color-blue"></i>  2GB Space</p>
+								  <p><i class="fa fa-check color-blue"></i>  3 Account</p>
+								  <p><i class="fa fa-check color-blue"></i>  Supporting</p>
+								  <p><i class="fa fa-check color-blue"></i> Unlimated Download</p>
+								  <p><i class="fa fa-check color-blue"></i> Unlimated Updates</p>
+								  <a class="main-btn btn-3 mt-20px" href="#0">Order Now</a>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+				  <div id="tab2-content">
+					  <div class="row">
+						  <div class="col-md-4">
+							  <div class="price-table bg-fff mt-25px mb-25px">
+								  <h3 class="fw-500">Basic</h3>
+								  <h1 class="fw-500 mt-20px mb-20px"><span class="fw-200 bg-gray radius-50px pl-15px pr-15px">59 <span class="fs-25">$</span> </span>  <span class="fs-20"> / year</span></h1>
+								  <p class="ml-10px mr-10x mb-20px">when an unknown printer took a galley of type and scrambled it</p>
+								  <p><i class="fa fa-check color-blue"></i> 3 Users</p>
+								  <p><i class="fa fa-check color-blue"></i>  2GB Space</p>
+								  <p><i class="fa fa-check color-blue"></i>  3 Account</p>
+								  <p><i class="fa fa-check color-blue"></i>  Supporting</p>
+								  <p><i class="fa fa-close color-orange"></i> Unlimated Download</p>
+								  <p><i class="fa fa-close color-orange"></i> Unlimated Updates</p>
+								  <a class="main-btn btn-3 mt-20px" href="#0">Order Now</a>
+							  </div>
+						  </div>
+						  <div class="col-md-4">
+							  <div class="price-table bg-fff mt-25px mb-25px">
+								  <h3 class="fw-500">Premium</h3>
+								  <h1 class="fw-500 mt-20px mb-20px"><span class="fw-200 bg-gray radius-50px pl-15px pr-15px">79 <span class="fs-25">$</span> </span>  <span class="fs-20"> / year</span></h1>
+								  <p class="ml-10px mr-10x mb-20px">when an unknown printer took a galley of type and scrambled it</p>
+								  <p><i class="fa fa-check color-blue"></i> 3 Users</p>
+								  <p><i class="fa fa-check color-blue"></i>  2GB Space</p>
+								  <p><i class="fa fa-check color-blue"></i>  3 Account</p>
+								  <p><i class="fa fa-check color-blue"></i>  Supporting</p>
+								  <p><i class="fa fa-check color-blue"></i> Unlimated Download</p>
+								  <p><i class="fa fa-close color-orange"></i> Unlimated Updates</p>
+								  <a class="main-btn btn-3 mt-20px" href="#0">Order Now</a>
+							  </div>
+						  </div>
+						  <div class="col-md-4">
+							  <div class="price-table bg-fff mt-25px mb-25px">
+								  <h3 class="fw-500">Business</h3>
+								  <h1 class="fw-500 mt-20px mb-20px"><span class="fw-200 bg-gray radius-50px pl-15px pr-15px">99 <span class="fs-25">$</span> </span>  <span class="fs-20"> / year</span></h1>
+								  <p class="ml-10px mr-10x mb-20px">when an unknown printer took a galley of type and scrambled it</p>
+								  <p><i class="fa fa-check color-blue"></i> 3 Users</p>
+								  <p><i class="fa fa-check color-blue"></i>  2GB Space</p>
+								  <p><i class="fa fa-check color-blue"></i>  3 Account</p>
+								  <p><i class="fa fa-check color-blue"></i>  Supporting</p>
+								  <p><i class="fa fa-check color-blue"></i> Unlimated Download</p>
+								  <p><i class="fa fa-check color-blue"></i> Unlimated Updates</p>
+								  <a class="main-btn btn-3 mt-20px" href="#0">Order Now</a>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End price-area
+      ================================================== -->
+
+	  
+	  <!-- ==================================================
+							brands-area
+      ================================================== -->
+	  <section class="brands-area sec-padding text-center">
+		  <div class="container">
+			  <h1 class="title-h">Trusted By many companies</h1>
+			  <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  <div class="row">
+				  <div class="col-md-2 col-sm-4">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/100x30">
+					  </div>
+				  </div>
+				  <div class="col-md-2 col-sm-4">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/100x30">
+					  </div>
+				  </div>
+				  <div class="col-md-2 col-sm-4">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/100x30">
+					  </div>
+				  </div>
+				  <div class="col-md-2 col-sm-4">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/100x30">
+					  </div>
+				  </div>
+				  <div class="col-md-2 col-sm-4">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/100x30">
+					  </div>
+				  </div>
+				  <div class="col-md-2 col-sm-4">
+					  <div class="mt-25px mb-25px">
+						  <img alt="img" src="https://via.placeholder.com/100x30">
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End brands-area
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							get-started
+      ================================================== -->
+	  <section class="get-started bg-gray text-center triangle-top triangle-bottom">
+		  <div class="container">
+			  <div class="row mb-50px">
+				  <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 z-index-2">
+					  <h3 class="mb-10px">Work with PXsaas</h3>
+					  <p class="mb-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  <form class="p-relative">
+						  <input type="email" required class="radius-50px mb-10px pl-15px pt-7px pb-7px no-border w-100" placeholder="Enter your email">
+					  	  <button class="bg-orange color-fff radius-50px pr-15px pl-15px pt-7px pb-7px no-border p-absolute">Get Started</button>
+					  </form>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End get-started
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							footer-area
+      ================================================== -->
+	  <section class="footer-area sec-padding">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-lg-3 col-sm-6">
+					  <div class="mt-25px mb-25px">
+						  <img src="images/logo.png" class="mb-20px" alt="img">
+						  <p class="mb-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+						  <a class="main-btn btn-3" href="#0">Get Started</a>
+					  </div>
+				  </div>
+				  <div class="col-lg-3 col-sm-6">
+					  <div class="mt-25px mb-25px links">
+						  <h4 class="mb-20px">Useful Links</h4>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Home</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Features</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">About</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Services</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Blog</a>
+						  </h6>
+					  </div>
+				  </div>
+				  <div class="col-lg-3 col-sm-6">
+					  <div class="mt-25px mb-25px links">
+						  <h4 class="mb-20px">Company</h4>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Career</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Leadership</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Strategy</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Services</a>
+						  </h6>
+						  <h6 class="mb-10px">
+							  <i class="fa fa-angle-right"></i> <a href="#0" class="color-333 color-blue-hvr transition-3">Blog</a>
+						  </h6>
+					  </div>
+				  </div>
+				  <div class="col-lg-3 col-sm-6">
+					  <div class="mt-25px mb-25px">
+						  <h4 class="mb-20px">Contact Info</h4>
+						  <p class="mb-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+						  <h6><i class="fa fa-map-marker mr-5px fs-15 color-blue bg-gray radius-50 address text-center"></i> 78 st Merrick Boulevard.</h6>
+						  <h6><i class="fa fa-phone mr-5px fs-15 color-blue bg-gray radius-50 address text-center"></i> +(07) 012345678</h6>
+						  <h6 class="mb-30px"><i class="fa fa-envelope mr-5px fs-15 color-blue bg-gray radius-50 address text-center"></i> support@info.com</h6>
+						  <a href="#0" class="social color-blue color-fff-hvr bg-orange-hvr bg-gray text-center radius-50 fs-15 d-inline-block"><i class="fa fa-facebook"></i> </a> 
+						  <a href="#0" class="social color-blue color-fff-hvr bg-orange-hvr bg-gray text-center radius-50 fs-15 d-inline-block"><i class="fa fa-twitter"></i> </a> 
+						  <a href="#0" class="social color-blue color-fff-hvr bg-orange-hvr bg-gray text-center radius-50 fs-15 d-inline-block"><i class="fa fa-linkedin"></i> </a> 
+						  <a href="#0" class="social color-blue color-fff-hvr bg-orange-hvr bg-gray text-center radius-50 fs-15 d-inline-block"><i class="fa fa-behance"></i> </a> 
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End footer-area
+      ================================================== -->
+	  
+	  <!-- ==================================================
+							copyright-area
+      ================================================== -->
+	  <section class="bg-gray sm-padding text-center">
+		  <div class="container">
+			  <h6 class="mb-0px">© 2018 Designed by Marlon Falcón</h6>
+		  </div>
+	  </section>
+	  <!-- ==================================================
+							End copyright-area
+      ================================================== -->
+	  
+	  
+	  <!-- ==================================================
+							scroll-top-btn
+      ================================================== -->
+	  <div class="scroll-top-btn text-center">
+		  <i class="fa fa-angle-up fs-20 color-fff bg-blue bg-orange-hvr radius-50"></i>          
+	  </div>
+	  <!-- ==================================================
+							End scroll-top-btn
+      ================================================== -->
+	  
+	  
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.0.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/lity.min.js' %}"></script>
+    <script src="{% static 'js/lightbox.js' %}"></script>
+	<script src="{% static 'js/scrollIt.min.js' %}"></script>
+	<script src="{% static 'js/validator.js"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
+	    
+  </body>
+</html>
