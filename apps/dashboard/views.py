@@ -7,3 +7,6 @@ from django.http import HttpResponse
 
 def index_dashboard(request):
     return render(request, "dashboard.html")
+
+def login(request):
+    return render(request, "login.html")
