@@ -20,7 +20,5 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include ('apps.home.urls')),
-    # path('dashboard/', include('apps.dashboard.urls')),
-    # url(r'^dashboard/', include ('apps.dashboard.urls')),
-    # path('dashboard/', views.dashboard, name='dashboard')
+    url(r'^dashboard/', include ('apps.dashboard.urls')),
 ]
