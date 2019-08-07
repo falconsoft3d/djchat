@@ -1,0 +1,2 @@
+# djchat
+Django Chat
