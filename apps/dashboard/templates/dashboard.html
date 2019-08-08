@@ -27,15 +27,6 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
-      <!--
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{% static '/index3.html' %}" class="nav-link">Home</a>
-      </li>
-    
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-      -->
     </ul>
 
     
@@ -86,7 +77,7 @@
           </li>
 
           <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
+              <a href="visitors" class="nav-link">
                 <i class="nav-icon fas fa-comment"></i>
                 <p>Visitantes</p>
                 <span class="badge badge-info right">6</span>
@@ -95,19 +86,11 @@
 
 
           <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
+              <a href="record" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
                 <p>Historial</p>
               </a>
             </li>
-
-            <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-bars"></i>
-                  <p>Análisis</p>
-                </a>
-           </li>
-
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -119,16 +102,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
+                <a href="profile" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
-                </a>
-              </li>
-            
-              <li class="nav-item">
-                <a href="../layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
+                  <p>Perfil</p>
                 </a>
               </li>
             </ul>
@@ -160,13 +136,6 @@
                 </li>
               </ul>
             </li>
-
-          <!-- <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>Ejemplo</p>
-            </a>
-          </li> -->
 
           <li class="nav-item has-treeview">
               <a href="logout" class="nav-link">
@@ -204,30 +173,7 @@
 
     <!-- Main content -->
     <section class="content">
-        {% block content %}
-      <!-- Default box -->
-      <div style="margin-top: 20px;"  class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-              <i class="fas fa-minus"></i></button>
-            <button type="button" class="btn btn-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fas fa-times"></i></button>
-          </div>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
-      </div>
-      <!-- /.card -->
-      {% endblock %}
+        {% block content %}{% endblock %}
   </section>
   </div>
   <!-- /.content-wrapper -->
@@ -259,5 +205,7 @@
 <script src="{% static '/dist/js/adminlte.min.js' %}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{% static '/dist/js/demo.js' %}"></script>
+
+
 </body>
 </html>

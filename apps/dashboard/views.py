@@ -7,21 +7,34 @@ from django.contrib.auth import authenticate
 from django.shortcuts import redirect
 from django.contrib.auth import logout, login
 
-# Create your views here.
+# Public
+def login_user(request):
+    return render(request, "login.html")
 
+def dashboard_register(request):
+    return render(request, "register.html")
+
+
+# Private
 @login_required(login_url="/dashboard/login")
 def index_dashboard(request):
     return render(request, "dashboard.html")
 
-def login_user(request):
-    return render(request, "login.html")
+@login_required(login_url="/dashboard/home")
+def dashboard_visitors(request):
+    return render(request, "visitors.html")
+
+@login_required(login_url="/dashboard/profile")
+def dashboard_profile(request):
+    return render(request, "profile.html")
+
+@login_required(login_url="/dashboard/home")
+def dashboard_record(request):
+    return render(request, "record.html")
 
 @login_required(login_url="/dashboard/home")
 def dashboard_home(request):
     return render(request, "home.html")
-
-def dashboard_register(request):
-    return render(request, "register.html")
 
 def auth(request):
     username = request.POST['email']
@@ -29,7 +42,7 @@ def auth(request):
     user = authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
-        return redirect('/dashboard')
+        return redirect('/dashboard/home')
     else:
         return redirect('/dashboard/login')
         
