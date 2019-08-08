@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from ..dashboard.views import index_dashboard, login_user, auth, logout_user, dashboard_home, dashboard_register, dashboard_visitors, dashboard_record, dashboard_profile
+from ..dashboard.views import index_dashboard, change_password, dashboard_widget, login_user, auth, logout_user, dashboard_home, dashboard_register, dashboard_visitors, dashboard_record, dashboard_profile
 
 
 urlpatterns = [
@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^visitors$', dashboard_visitors),
     url(r'^record$', dashboard_record),
     url(r'^profile$', dashboard_profile),
+    url(r'^widget$', dashboard_widget),
+    url(r'^change_password$', change_password),
 ]

@@ -1,0 +1,25 @@
+{% extends 'dashboard.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<section class="content">
+    <div class="container-fluid">
+      <div class="row" style="margin-top:20px;">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-body" style="min-height:600px;">
+              <div class="chart">
+                  <div class="form-group">
+                      <label>Widget</label>
+                      <p>Incruste este script entre las etiquetas <strong>Head</strong> </p>
+                      <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="{% static '/plugins/chart.js/Chart.min.js' %}"></script> 
+{% endblock %}

@@ -20,6 +20,10 @@ def dashboard_register(request):
 def index_dashboard(request):
     return render(request, "dashboard.html")
 
+@login_required(login_url="/dashboard/login")
+def change_password(request):
+    return render(request, "change_password.html")
+
 @login_required(login_url="/dashboard/home")
 def dashboard_visitors(request):
     return render(request, "visitors.html")
@@ -27,6 +31,10 @@ def dashboard_visitors(request):
 @login_required(login_url="/dashboard/profile")
 def dashboard_profile(request):
     return render(request, "profile.html")
+
+@login_required(login_url="/dashboard/profile")
+def dashboard_widget(request):
+    return render(request, "widget.html")
 
 @login_required(login_url="/dashboard/home")
 def dashboard_record(request):
