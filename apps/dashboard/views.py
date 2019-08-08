@@ -20,6 +20,8 @@ def login_user(request):
 def dashboard_home(request):
     return render(request, "home.html")
 
+def dashboard_register(request):
+    return render(request, "register.html")
 
 def auth(request):
     username = request.POST['email']
